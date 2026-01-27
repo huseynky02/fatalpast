@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Jack the Ripper",
+        "year": "1888",
+        "era": "1800s",
+        "type": "Serial Killer",
+        "region": "Europe",
+        "location": "London",
+        "description": "The most notorious unsolved murders in history. Five brutal killings in Whitechapel.",
+        "link": "cases/jacktheripper.html",
+        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+    },
+    {
+        "id": 2,
+        "name": "Zodiac Killer",
+        "year": "1968-1970",
+        "era": "1970-1990",
+        "type": "Serial Killer",
+        "region": "USA",
+        "location": "California",
+        "description": "An elusive serial killer who taunted authorities with cryptic ciphers. Never caught.",
+        "link": "#",
+        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+    },
+    {
+        "id": 3,
+        "name": "Black Dahlia",
+        "year": "1947",
+        "era": "1940-1960",
+        "type": "Unsolved",
+        "region": "USA",
+        "location": "Los Angeles",
+        "description": "One of America's most infamous unsolved murders. A young actress brutally killed.",
+        "link": "#",
+        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+    },
+    {
+        "id": 4,
+        "name": "Son of Sam",
+        "year": "1976",
+        "era": "1970-1990",
+        "type": "Serial Killer",
+        "region": "USA",
+        "location": "New York",
+        "description": "David Berkowitz terrorized New York with random shootings. An unprecedented manhunt.",
+        "link": "#",
+        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+    },
+    {
+        "id": 5,
+        "name": "Unabomber",
+        "year": "1978-1995",
+        "era": "1970-1990",
+        "type": "Serial Killer",
+        "region": "USA",
+        "location": "United States",
+        "description": "Ted Kaczynski's campaign of mail bombings terrorized America for 17 years.",
+        "link": "#",
+        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+    },
+    {
+        "id": 6,
+        "name": "BTK Killer",
+        "year": "1974-1979",
+        "era": "1970-1990",
+        "type": "Serial Killer",
+        "region": "USA",
+        "location": "Kansas",
+        "description": "Dennis Rader evaded capture for 31 years before his digital mistake.",
+        "link": "#",
+        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+    }
+]
