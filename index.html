@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHCLS5XVKB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WHCLS5XVKB');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FatalPast | Dark History Digital Archive</title>
@@ -39,6 +50,7 @@
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: none;
         }
+
         .mobile-menu.active {
             transform: translateX(0);
         }
@@ -50,6 +62,7 @@
             transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
             display: none;
         }
+
         .mobile-backdrop.active {
             opacity: 1;
             visibility: visible;
@@ -57,11 +70,13 @@
         }
 
         @media (max-width: 768px) {
+
             .mobile-menu,
             .mobile-backdrop {
                 will-change: transform, opacity;
                 display: none;
             }
+
             #mobileMenuButton {
                 display: none !important;
             }
@@ -91,10 +106,10 @@
                 </div>
             </a>
 
-            <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300 items-center">
+            <div
+                class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300 items-center">
                 <a href="cases.html" class="hover:text-white transition-all">Cases</a>
-                <a href="#features" class="hover:text-white transition-all">Features</a>
-                <a href="#community" class="hover:text-white transition-all">Community</a>
+                <a href="about.html" class="hover:text-white transition-all">About Us</a>
                 <a href="https://discord.gg/fatalpast" target="_blank"
                     class="bg-red-600/10 border border-red-600/50 text-red-500 px-6 py-2 rounded-full hover:bg-red-600 hover:text-white transition-all">
                     <i class="fab fa-discord mr-2"></i>Discord
@@ -120,27 +135,28 @@
             class="mobile-menu fixed inset-y-0 right-0 w-72 bg-gradient-to-b from-black/95 via-black/98 to-black backdrop-blur-xl z-50 p-6 md:hidden border-l border-red-600/20 transform transition-all duration-300 ease-out">
             <div class="flex justify-between items-center mb-8 pb-6 border-b border-zinc-800/50">
                 <h2 class="text-2xl font-bold text-white font-serif">Menu</h2>
-                <button id="closeMobileMenu" class="text-zinc-400 hover:text-red-500 hover:scale-110 transition-all duration-300 relative w-8 h-8 flex items-center justify-center" aria-label="Close mobile menu">
+                <button id="closeMobileMenu"
+                    class="text-zinc-400 hover:text-red-500 hover:scale-110 transition-all duration-300 relative w-8 h-8 flex items-center justify-center"
+                    aria-label="Close mobile menu">
                     <span class="absolute w-5 h-0.5 bg-current transform rotate-45"></span>
                     <span class="absolute w-5 h-0.5 bg-current transform -rotate-45"></span>
                 </button>
             </div>
 
             <div class="space-y-3">
-                <a href="cases.html" class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-red-500 hover:bg-red-600/10 transition-all duration-300 border border-transparent hover:border-red-600/30">
+                <a href="cases.html"
+                    class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-red-500 hover:bg-red-600/10 transition-all duration-300 border border-transparent hover:border-red-600/30">
                     <i class="fas fa-folder text-red-500/70 group-hover:text-red-500 transition-colors"></i>
                     <span class="font-semibold tracking-wide">Cases</span>
-                    <i class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-red-500"></i>
+                    <i
+                        class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-red-500"></i>
                 </a>
-                <a href="#features" class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-cyan-400 hover:bg-cyan-600/10 transition-all duration-300 border border-transparent hover:border-cyan-600/30">
-                    <i class="fas fa-star text-cyan-400/70 group-hover:text-cyan-400 transition-colors"></i>
-                    <span class="font-semibold tracking-wide">Features</span>
-                    <i class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-cyan-400"></i>
-                </a>
-                <a href="#community" class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-purple-400 hover:bg-purple-600/10 transition-all duration-300 border border-transparent hover:border-purple-600/30">
-                    <i class="fas fa-users text-purple-400/70 group-hover:text-purple-400 transition-colors"></i>
-                    <span class="font-semibold tracking-wide">Community</span>
-                    <i class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-purple-400"></i>
+                <a href="about.html"
+                    class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-cyan-400 hover:bg-cyan-600/10 transition-all duration-300 border border-transparent hover:border-cyan-600/30">
+                    <i class="fas fa-info-circle text-cyan-400/70 group-hover:text-cyan-400 transition-colors"></i>
+                    <span class="font-semibold tracking-wide">About Us</span>
+                    <i
+                        class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-cyan-400"></i>
                 </a>
 
                 <div class="pt-6 mt-6 border-t border-zinc-800/50">
@@ -195,29 +211,53 @@
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mb-16">
                 <!-- Browse Cases Button -->
-                <a href="cases.html" class="group relative overflow-hidden rounded-xl px-8 md:px-12 py-4 md:py-5 transition-all duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 z-0 group-hover:from-red-700 group-hover:to-red-800 transition-all duration-500"></div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-400/20 to-red-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="absolute inset-0 border border-red-500/50 group-hover:border-red-400 rounded-xl transition-colors duration-500"></div>
-                    <div class="relative z-10 flex items-center justify-center space-x-3">
-                        <i class="fas fa-folder-open text-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"></i>
-                        <span class="text-white font-bold uppercase tracking-widest text-sm md:text-base">Browse Cases</span>
-                        <i class="fas fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                <a href="cases.html"
+                    class="group relative overflow-hidden rounded-xl px-8 md:px-12 py-4 md:py-5 transition-all duration-500 hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 z-0 group-hover:from-red-700 group-hover:to-red-800 transition-all duration-500">
                     </div>
-                    <div class="absolute inset-0 shadow-lg shadow-red-600/50 group-hover:shadow-red-600/80 rounded-xl transition-all duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-400/20 to-red-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 border border-red-500/50 group-hover:border-red-400 rounded-xl transition-colors duration-500">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center space-x-3">
+                        <i
+                            class="fas fa-folder-open text-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"></i>
+                        <span class="text-white font-bold uppercase tracking-widest text-sm md:text-base">Browse
+                            Cases</span>
+                        <i
+                            class="fas fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                    </div>
+                    <div
+                        class="absolute inset-0 shadow-lg shadow-red-600/50 group-hover:shadow-red-600/80 rounded-xl transition-all duration-500">
+                    </div>
                 </a>
 
                 <!-- Join Discord Button -->
-                <a href="https://discord.gg/fatalpast" target="_blank" class="group relative overflow-hidden rounded-xl px-8 md:px-12 py-4 md:py-5 transition-all duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 z-0 group-hover:from-blue-700 group-hover:to-blue-800 transition-all duration-500"></div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-400/20 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="absolute inset-0 border border-blue-500/50 group-hover:border-blue-400 rounded-xl transition-colors duration-500"></div>
-                    <div class="relative z-10 flex items-center justify-center space-x-3">
-                        <i class="fab fa-discord text-xl group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300"></i>
-                        <span class="text-white font-bold uppercase tracking-widest text-sm md:text-base">Join Community</span>
-                        <i class="fas fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                <a href="https://discord.gg/fatalpast" target="_blank"
+                    class="group relative overflow-hidden rounded-xl px-8 md:px-12 py-4 md:py-5 transition-all duration-500 hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 z-0 group-hover:from-blue-700 group-hover:to-blue-800 transition-all duration-500">
                     </div>
-                    <div class="absolute inset-0 shadow-lg shadow-blue-600/50 group-hover:shadow-blue-600/80 rounded-xl transition-all duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-400/20 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 border border-blue-500/50 group-hover:border-blue-400 rounded-xl transition-colors duration-500">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center space-x-3">
+                        <i
+                            class="fab fa-discord text-xl group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300"></i>
+                        <span class="text-white font-bold uppercase tracking-widest text-sm md:text-base">Join
+                            Community</span>
+                        <i
+                            class="fas fa-arrow-right opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                    </div>
+                    <div
+                        class="absolute inset-0 shadow-lg shadow-blue-600/50 group-hover:shadow-blue-600/80 rounded-xl transition-all duration-500">
+                    </div>
                 </a>
             </div>
 
@@ -275,239 +315,14 @@
             </div>
 
             <!-- Cases Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 md:gap-8">
-                <!-- Case Card 1 -->
-                <a href="cases/jacktheripper.html" class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500 block"
-                    style="animation-delay: 0.1s;">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
-                    </div>
-                    <div
-                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
-                    </div>
-
-                    <img src="https://images.huffingtonpost.com/2016-03-10-1457627205-2416058-JacktheRipper_Maybrick-thumb.jpg"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="Jack the Ripper">
-
-                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
-                        <div>
-                            <span
-                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
-                                1888 • London
-                            </span>
-                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">Jack the
-                                Ripper</h3>
-                        </div>
-
-                        <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                The most notorious unsolved murders in history. Five brutal killings that sparked the
-                                modern investigation techniques.
-                            </p>
-                            <div
-                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Case Card 2 -->
-                <div class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500"
-                    style="animation-delay: 0.2s;">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
-                    </div>
-                    <div
-                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
-                    </div>
-
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Zodiac-Killer.jpg/250px-Zodiac-Killer.jpg"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="Zodiac Killer">
-
-                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
-                        <div>
-                            <span
-                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
-                                1960s • California
-                            </span>
-                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">Zodiac Killer
-                            </h3>
-                        </div>
-
-                        <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                An elusive serial killer who taunted authorities with cryptic ciphers. Never caught,
-                                forever mysterious.
-                            </p>
-                            <div
-                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Card 3 -->
-                <div class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500"
-                    style="animation-delay: 0.3s;">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
-                    </div>
-                    <div
-                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
-                    </div>
-
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Elizabeth_Short_photo_from_police_bulletin.jpg/250px-Elizabeth_Short_photo_from_police_bulletin.jpg"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="Black Dahlia">
-
-                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
-                        <div>
-                            <span
-                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
-                                1947 • Los Angeles
-                            </span>
-                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">Black Dahlia
-                            </h3>
-                        </div>
-
-                        <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                One of America's most infamous unsolved murders. A young actress brutally killed in
-                                Hollywood's golden age.
-                            </p>
-                            <div
-                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Card 4 -->
-                <div class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500"
-                    style="animation-delay: 0.4s;">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
-                    </div>
-                    <div
-                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
-                    </div>
-
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/David_Berkowitz.jpg/250px-David_Berkowitz.jpg"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="Son of Sam">
-
-                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
-                        <div>
-                            <span
-                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
-                                1976 • New York
-                            </span>
-                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">Son of Sam
-                            </h3>
-                        </div>
-
-                        <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                David Berkowitz terrorized New York City with a series of random shootings. An
-                                unprecedented manhunt ensued.
-                            </p>
-                            <div
-                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Card 5 -->
-                <div class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500"
-                    style="animation-delay: 0.5s;">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
-                    </div>
-                    <div
-                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
-                    </div>
-
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Ted_Kaczynski_2_%28cropped%29.jpg/250px-Ted_Kaczynski_2_%28cropped%29.jpg"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="Unabomber">
-
-                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
-                        <div>
-                            <span
-                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
-                                1978 • USA
-                            </span>
-                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">Unabomber
-                            </h3>
-                        </div>
-
-                        <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                Ted Kaczynski's campaign of mail bombings terrorized America for 17 years. A cautionary
-                                tale of extremism.
-                            </p>
-                            <div
-                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Card 6 -->
-                <div class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500"
-                    style="animation-delay: 0.6s;">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
-                    </div>
-                    <div
-                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
-                    </div>
-
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/DennisRader.jpg/250px-DennisRader.jpg"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="BTK Killer">
-
-                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
-                        <div>
-                            <span
-                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
-                                1974 • Kansas
-                            </span>
-                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">BTK Killer
-                            </h3>
-                        </div>
-
-                        <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                Dennis Rader evaded capture for 31 years before his digital mistake. A masterclass in
-                                criminal profiling.
-                            </p>
-                            <div
-                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="featuredCasesGrid" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 md:gap-8">
+                <!-- Dynamically populated from cases.json -->
             </div>
+
 
             <!-- View All Button -->
             <div class="text-center mt-16">
-                <a href="#"
+                <a href="cases.html"
                     class="inline-flex items-center space-x-2 px-8 py-4 border border-red-600/40 text-red-500 hover:bg-red-600/10 rounded-lg font-bold uppercase tracking-widest transition-all hover:border-red-600/80">
                     <span>Explore All Cases</span>
                     <i class="fas fa-arrow-right"></i>
@@ -662,17 +477,20 @@
                 <div
                     class="text-center p-4 md:p-6 rounded-xl border border-white/5 glass group hover:border-red-600/40 transition-all">
                     <div class="text-2xl md:text-4xl font-bold text-red-500 font-mono mb-2">50+</div>
-                    <div class="text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold break-words">Cases<br class="hidden sm:block" /> Investigated</div>
+                    <div class="text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold break-words">
+                        Cases<br class="hidden sm:block" /> Investigated</div>
                 </div>
                 <div
                     class="text-center p-4 md:p-6 rounded-xl border border-white/5 glass group hover:border-cyan-600/40 transition-all">
                     <div class="text-2xl md:text-4xl font-bold text-cyan-400 font-mono mb-2">5K+</div>
-                    <div class="text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold break-words">Community<br class="hidden sm:block" /> Members</div>
+                    <div class="text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold break-words">
+                        Community<br class="hidden sm:block" /> Members</div>
                 </div>
                 <div
                     class="text-center p-4 md:p-6 rounded-xl border border-white/5 glass group hover:border-purple-600/40 transition-all">
                     <div class="text-2xl md:text-4xl font-bold text-purple-400 font-mono mb-2">24/7</div>
-                    <div class="text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold break-words">Always<br class="hidden sm:block" /> Online</div>
+                    <div class="text-xs md:text-sm text-zinc-400 uppercase tracking-wider font-semibold break-words">
+                        Always<br class="hidden sm:block" /> Online</div>
                 </div>
             </div>
         </div>
@@ -853,6 +671,43 @@
                             </div>
                         </div>
                     </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@fatalpast" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-8 feature-card flex-1"
+                        style="animation-delay: 0.4s;">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-cyan-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-cyan-600/30 group-hover:border-cyan-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-start mb-4">
+                                <div
+                                    class="w-14 h-14 bg-gradient-to-br from-cyan-600/40 to-cyan-700/30 rounded-lg flex items-center justify-center border border-cyan-600/40 group-hover:from-cyan-600/60 group-hover:to-cyan-700/50 transition-all flex-shrink-0">
+                                    <i class="fab fa-tiktok text-cyan-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4 flex-grow">
+                                    <h3
+                                        class="text-2xl font-bold text-white font-serif group-hover:text-cyan-400 transition-colors">
+                                        TikTok</h3>
+                                    <p class="text-cyan-400 font-semibold text-sm">Quick Cases & Crime Fix</p>
+                                </div>
+                            </div>
+                            <p
+                                class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
+                                Explore short-form criminal history, rapid case summaries, and fascinating historical
+                                facts in our TikTok series.
+                            </p>
+                            <div
+                                class="flex items-center text-cyan-500 font-semibold text-sm group-hover:text-cyan-400 transition-colors">
+                                <span>Follow Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -884,7 +739,7 @@
                         class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-b border-red-600/30 pb-3">
                         Featured Cases</h3>
                     <ul class="space-y-3">
-                        <li><a href="/killers/jacktheripper.html"
+                        <li><a href="cases/jacktheripper.html"
                                 class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
                                 <i
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
@@ -902,7 +757,7 @@
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
                                 <span class="group-hover:ml-2 transition-all">Black Dahlia</span>
                             </a></li>
-                        <li><a href="#"
+                        <li><a href="cases.html"
                                 class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
                                 <i
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
@@ -935,6 +790,12 @@
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
                                 <span class="group-hover:ml-2 transition-all">Instagram</span>
                             </a></li>
+                        <li><a href="https://tiktok.com/@fatalpast" target="_blank"
+                                class="text-zinc-400 hover:text-cyan-400 text-sm transition-colors flex items-center group">
+                                <i
+                                    class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                <span class="group-hover:ml-2 transition-all">TikTok</span>
+                            </a></li>
                     </ul>
                 </div>
 
@@ -944,25 +805,25 @@
                         class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-b border-purple-600/30 pb-3">
                         Legal</h3>
                     <ul class="space-y-3">
-                        <li><a href="#"
+                        <li><a href="privacy.html"
                                 class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
                                 <i
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
                                 <span class="group-hover:ml-2 transition-all">Privacy Policy</span>
                             </a></li>
-                        <li><a href="#"
+                        <li><a href="terms.html"
                                 class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
                                 <i
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
                                 <span class="group-hover:ml-2 transition-all">Terms of Use</span>
                             </a></li>
-                        <li><a href="#"
+                        <li><a href="contact.html"
                                 class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
                                 <i
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
                                 <span class="group-hover:ml-2 transition-all">Contact</span>
                             </a></li>
-                        <li><a href="#"
+                        <li><a href="disclaimer.html"
                                 class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
                                 <i
                                     class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
@@ -990,6 +851,10 @@
                             class="text-zinc-500 hover:text-purple-500 hover:scale-125 transition-all duration-300">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
+                        <a href="https://tiktok.com/@fatalpast" target="_blank"
+                            class="text-zinc-500 hover:text-cyan-400 hover:scale-125 transition-all duration-300">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1003,8 +868,19 @@
     </button>
 
     <div id="loadingOverlay"
-        class="fixed inset-0 bg-black/98 flex items-center justify-center z-50 opacity-0 invisible backdrop-blur-md">
-        <div class="spinner"></div>
+        class="fixed inset-0 bg-black/98 flex items-center justify-center z-[100] opacity-0 invisible backdrop-blur-md transition-all duration-500">
+        <div class="scan-line"></div>
+        <div class="spinner-container">
+            <div class="spinner">
+                <i class="fas fa-skull spinner-icon"></i>
+            </div>
+            <div class="loading-text">
+                <div class="loading-status">Loading Evidence...</div>
+                <div class="loading-progress">
+                    <div class="loading-progress-bar"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>

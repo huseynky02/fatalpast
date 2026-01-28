@@ -60,14 +60,14 @@ function initNavigation() {
         // Close menu when clicking outside (on desktop-like behavior)
         document.addEventListener('click', (e) => {
             // Only close if menu is open and click is outside menu and button
-            if (mobileMenu.classList.contains('active') && 
-                !mobileMenu.contains(e.target) && 
+            if (mobileMenu.classList.contains('active') &&
+                !mobileMenu.contains(e.target) &&
                 !mobileMenuButton.contains(e.target)) {
                 closeMenu();
             }
         });
     }
-}}
+}
 
 function initScrollEffects() {
     const progressBar = document.getElementById("progress-bar");
@@ -91,27 +91,69 @@ function initScrollEffects() {
 
 function initLoadingOverlay() {
     const overlay = document.getElementById('loadingOverlay');
+    const spinner = overlay?.querySelector('.spinner');
+    const statusText = overlay?.querySelector('.loading-status');
+    const loadingProgress = overlay?.querySelector('.loading-progress-bar');
+
     if (!overlay) return;
 
-    window.addEventListener('load', () => {
-        overlay.classList.remove('show');
-    });
+    const messages = [
+        "Analyzing Case Files...",
+        "Retrieving Evidence...",
+        "Scanning Archive...",
+        "Accessing Dossier...",
+        "Processing Forensic Data..."
+    ];
+
+    const hideOverlay = () => {
+        setTimeout(() => {
+            overlay.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }, 500);
+    };
+
+    if (document.readyState === 'complete') {
+        hideOverlay();
+    } else {
+        window.addEventListener('load', hideOverlay);
+    }
 
     document.addEventListener('click', (e) => {
         const link = e.target.closest('a');
-        if (link && link.href && !link.target) {
+        if (link && link.href && !link.target && !e.ctrlKey && !e.shiftKey && !e.metaKey) {
             const href = link.getAttribute('href');
-            if (!href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto')) {
+            const url = new URL(link.href);
+            const isInternal = url.hostname === window.location.hostname;
+            const isAnchor = href.startsWith('#');
+            const isSpecial = href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:');
+
+            if (isInternal && !isAnchor && !isSpecial) {
                 e.preventDefault();
+
+                if (statusText) {
+                    statusText.innerText = messages[Math.floor(Math.random() * messages.length)];
+                }
+
                 overlay.classList.add('show');
-                // 0-5 saniye arasında rastgele süreli yüklenme
-                const randomDelay = Math.random() * 5000;
+                document.body.style.overflow = 'hidden';
+
+                const randomDelay = 500 + Math.random() * 4500;
+
+                if (loadingProgress) {
+                    loadingProgress.style.width = '0%';
+                    loadingProgress.style.transition = `width ${randomDelay}ms linear`;
+                    setTimeout(() => {
+                        loadingProgress.style.width = '100%';
+                    }, 50);
+                }
+
                 setTimeout(() => {
-                    window.location.href = href;
+                    window.location.href = link.href;
                 }, randomDelay);
             }
         }
     });
+    console.log('FatalPast Loading Overlay Initialized');
 }
 
 function initSmoothAnchors() {
@@ -157,7 +199,7 @@ function initStatsCounter() {
                 const target = entry.target;
                 const countTo = parseInt(target.getAttribute('data-target'));
                 target.dataset.animated = 'true';
-                
+
                 let count = 0;
                 const duration = 2000; // 2 seconds
                 const increment = countTo / (duration / 16); // 60 FPS
@@ -199,6 +241,59 @@ function initLazyLoad() {
     lazyImages.forEach(img => imageObserver.observe(img));
 }
 
+function initFeaturedCases() {
+    const featuredGrid = document.getElementById('featuredCasesGrid');
+    if (!featuredGrid) return;
+
+    fetch('cases.json')
+        .then(response => response.json())
+        .then(cases => {
+            // Take first 6 cases for featured section
+            const featured = cases.slice(0, 6);
+
+            featuredGrid.innerHTML = featured.map((c, idx) => `
+                <a href="${c.link}"
+                    class="case-card group relative h-48 md:h-80 rounded-xl overflow-hidden backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-500 block"
+                    style="animation: slideInUp 0.6s ease-out backwards; animation-delay: ${(idx + 1) * 0.1}s;">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-600/30 via-dark-bg/50 to-dark-bg z-10 group-hover:from-red-600/60 group-hover:via-dark-bg/70 transition-all duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
+                    </div>
+
+                    <img src="${c.image}"
+                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
+                        alt="${c.name}">
+
+                    <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
+                        <div>
+                            <span
+                                class="inline-block px-2 md:px-3 py-1 bg-red-600/30 border border-red-600/50 rounded-full text-red-400 text-xs font-bold uppercase tracking-widest mb-2 md:mb-3 group-hover:bg-red-600/60 group-hover:border-red-600 transition-all">
+                                ${c.year} • ${c.location}
+                            </span>
+                            <h3 class="text-lg md:text-2xl lg:text-3xl font-bold font-serif text-white leading-tight">
+                                ${c.name}</h3>
+                        </div>
+
+                        <div class="space-y-2 md:space-y-3 hidden md:block">
+                            <p
+                                class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
+                                ${c.description}
+                            </p>
+                            <div
+                                class="flex items-center space-x-2 text-red-400 font-semibold text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        })
+        .catch(err => console.error('Error loading featured cases:', err));
+}
+
 // Initializations
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -208,4 +303,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initSecurity();
     initLazyLoad();
     initStatsCounter();
+    initFeaturedCases();
 });

@@ -2,6 +2,16 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHCLS5XVKB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WHCLS5XVKB');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack the Ripper | FatalPast Digital Archive</title>
@@ -42,6 +52,7 @@
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: none;
         }
+
         .mobile-menu.active {
             transform: translateX(0);
         }
@@ -53,6 +64,7 @@
             transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
             display: none;
         }
+
         .mobile-backdrop.active {
             opacity: 1;
             visibility: visible;
@@ -60,11 +72,13 @@
         }
 
         @media (max-width: 768px) {
+
             .mobile-menu,
             .mobile-backdrop {
                 will-change: transform, opacity;
                 display: none;
             }
+
             #mobileMenuButton {
                 display: none !important;
             }
@@ -72,15 +86,14 @@
     </style>
 </head>
 
-<body class="antialiased selection:bg-red-900 selection:text-white">
-
 <body class="antialiased selection:bg-red-900 selection:text-white font-sans bg-black text-zinc-200 overflow-x-hidden"
     style="background-image: radial-gradient(circle at 10% 20%, rgba(255, 0, 51, 0.02), transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 229, 255, 0.015), transparent 40%); background-color: #0a0a0a;">
 
     <!-- Progress Bar -->
     <div class="fixed top-0 left-0 w-full h-1 z-50 bg-black/40">
         <div id="progress-bar"
-            class="h-full bg-gradient-to-r from-neon-red to-red-900 w-0 shadow-neon transition-all duration-100"></div>
+            class="h-full bg-gradient-to-r from-neon-red to-red-900 w-0 shadow-neon transition-all duration-100">
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -92,14 +105,15 @@
                 <div>
                     <span
                         class="text-3xl font-bold font-serif text-red-600 tracking-tighter uppercase neon-text group-hover:text-red-500 transition-colors">FatalPast</span>
-                    <span class="block text-[10px] font-mono text-zinc-700 tracking-[0.2em]">Dark History Archive</span>
+                    <span class="block text-[10px] font-mono text-zinc-700 tracking-[0.2em]">Dark History
+                        Archive</span>
                 </div>
             </a>
 
-            <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300 items-center">
+            <div
+                class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300 items-center">
                 <a href="../cases.html" class="hover:text-white transition-all">Cases</a>
-                <a href="#features" class="hover:text-white transition-all">Features</a>
-                <a href="#community" class="hover:text-white transition-all">Community</a>
+                <a href="../about.html" class="hover:text-white transition-all">About Us</a>
                 <a href="https://discord.gg/fatalpast" target="_blank"
                     class="bg-red-600/10 border border-red-600/50 text-red-500 px-6 py-2 rounded-full hover:bg-red-600 hover:text-white transition-all">
                     <i class="fab fa-discord mr-2"></i>Discord
@@ -125,17 +139,28 @@
             class="mobile-menu fixed inset-y-0 right-0 w-72 bg-gradient-to-b from-black/95 via-black/98 to-black backdrop-blur-xl z-50 p-6 md:hidden border-l border-red-600/20 transform transition-all duration-300 ease-out">
             <div class="flex justify-between items-center mb-8 pb-6 border-b border-zinc-800/50">
                 <h2 class="text-2xl font-bold text-white font-serif">Menu</h2>
-                <button id="closeMobileMenu" class="text-zinc-400 hover:text-red-500 hover:scale-110 transition-all duration-300 relative w-8 h-8 flex items-center justify-center" aria-label="Close mobile menu">
+                <button id="closeMobileMenu"
+                    class="text-zinc-400 hover:text-red-500 hover:scale-110 transition-all duration-300 relative w-8 h-8 flex items-center justify-center"
+                    aria-label="Close mobile menu">
                     <span class="absolute w-5 h-0.5 bg-current transform rotate-45"></span>
                     <span class="absolute w-5 h-0.5 bg-current transform -rotate-45"></span>
                 </button>
             </div>
 
             <div class="space-y-3">
-                <a href="../cases.html" class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-red-500 hover:bg-red-600/10 transition-all duration-300 border border-transparent hover:border-red-600/30">
+                <a href="../cases.html"
+                    class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-red-500 hover:bg-red-600/10 transition-all duration-300 border border-transparent hover:border-red-600/30">
                     <i class="fas fa-folder text-red-500/70 group-hover:text-red-500 transition-colors"></i>
                     <span class="font-semibold tracking-wide">Cases</span>
-                    <i class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-red-500"></i>
+                    <i
+                        class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-red-500"></i>
+                </a>
+                <a href="../about.html"
+                    class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-cyan-400 hover:bg-cyan-600/10 transition-all duration-300 border border-transparent hover:border-cyan-600/30">
+                    <i class="fas fa-info-circle text-cyan-400/70 group-hover:text-cyan-400 transition-colors"></i>
+                    <span class="font-semibold tracking-wide">About Us</span>
+                    <i
+                        class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-cyan-400"></i>
                 </a>
 
                 <div class="pt-6 mt-6 border-t border-zinc-800/50">
@@ -182,7 +207,8 @@
 
             <!-- Subtitle -->
             <p class="text-lg md:text-xl text-zinc-300 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-                History's most notorious serial killer. Five brutal murders in Whitechapel, London 1888. A mystery that
+                History's most notorious serial killer. Five brutal murders in Whitechapel, London 1888. A mystery
+                that
                 remains unsolved after 136 years. <span class="text-neon-red font-semibold">Primary sources, suspect
                     analysis, and archival evidence.</span>
             </p>
@@ -229,18 +255,22 @@
                         <div
                             class="flex justify-between items-center text-[10px] text-zinc-500 font-mono uppercase mt-2">
                             <span>Date: Aug 31, 1888</span>
-                            <span class="text-zinc-600 border border-zinc-800 px-1 rounded">Src: Met. Archives</span>
+                            <span class="text-zinc-600 border border-zinc-800 px-1 rounded">Src: Met.
+                                Archives</span>
                         </div>
                     </figcaption>
                 </figure>
 
                 <p class="text-lg text-zinc-300 font-light leading-relaxed mb-6">
-                    In the autumn of 1888, the Whitechapel district of London became the stage for a nightmare that has
-                    never truly ended. A series of murders, surgical in their precision and demonic in their brutality,
+                    In the autumn of 1888, the Whitechapel district of London became the stage for a nightmare that
+                    has
+                    never truly ended. A series of murders, surgical in their precision and demonic in their
+                    brutality,
                     gave birth to the world's first global media monster.
                 </p>
                 <p class="text-lg text-zinc-300 font-light leading-relaxed mb-6">
-                    The streets were dark, lit only by flickering gas lamps that cast long shadows. It was here, amidst
+                    The streets were dark, lit only by flickering gas lamps that cast long shadows. It was here,
+                    amidst
                     the smog and poverty, that "Jack" found his victims. The layout of the streets, resembling a
                     labyrinth, provided the perfect cover for his escape.
                 </p>
@@ -321,8 +351,10 @@
                         <span class="text-[10px] uppercase font-bold text-zinc-500 mb-4 block">Suspicion Level:
                             High</span>
                         <div class="space-y-2 md:space-y-3 hidden md:block">
-                            <p class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
-                                Polish barber living in Whitechapel at the time. Identified by witness but never charged due
+                            <p
+                                class="text-zinc-300 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors">
+                                Polish barber living in Whitechapel at the time. Identified by witness but never
+                                charged due
                                 to insufficient evidence.
                             </p>
                             <div
@@ -552,7 +584,8 @@
                             </div>
                             <p
                                 class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
-                                Watch our in-depth documentaries, case analyses, and exclusive video content covering
+                                Watch our in-depth documentaries, case analyses, and exclusive video content
+                                covering
                                 history's darkest criminal cases.
                             </p>
                             <div
@@ -589,11 +622,49 @@
                             </div>
                             <p
                                 class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
-                                Follow our daily stories, behind-the-scenes content, quick case updates, and engaging
+                                Follow our daily stories, behind-the-scenes content, quick case updates, and
+                                engaging
                                 reels about true crime history.
                             </p>
                             <div
                                 class="flex items-center text-purple-500 font-semibold text-sm group-hover:text-purple-400 transition-colors">
+                                <span>Follow Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@fatalpast" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-8 feature-card flex-1"
+                        style="animation-delay: 0.4s;">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-cyan-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-cyan-600/30 group-hover:border-cyan-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-start mb-4">
+                                <div
+                                    class="w-14 h-14 bg-gradient-to-br from-cyan-600/40 to-cyan-700/30 rounded-lg flex items-center justify-center border border-cyan-600/40 group-hover:from-cyan-600/60 group-hover:to-cyan-700/50 transition-all flex-shrink-0">
+                                    <i class="fab fa-tiktok text-cyan-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4 flex-grow">
+                                    <h3
+                                        class="text-2xl font-bold text-white font-serif group-hover:text-cyan-400 transition-colors">
+                                        TikTok</h3>
+                                    <p class="text-cyan-400 font-semibold text-sm">Quick Cases & Crime Fix</p>
+                                </div>
+                            </div>
+                            <p
+                                class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
+                                Explore short-form criminal history, rapid case summaries, and fascinating historical
+                                facts in our TikTok series.
+                            </p>
+                            <div
+                                class="flex items-center text-cyan-500 font-semibold text-sm group-hover:text-cyan-400 transition-colors">
                                 <span>Follow Now</span>
                                 <i class="fas fa-arrow-right ml-2"></i>
                             </div>
@@ -609,118 +680,213 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
-                        <div class="knife-logo flex items-center justify-center">
-                            <i class="fas fa-skull text-white text-lg absolute"></i>
+                        <!-- Footer -->
+                        <footer
+                            class="relative border-t border-white/10 py-16 md:py-24 bg-black/95 backdrop-blur-sm overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-b from-red-900/3 to-transparent pointer-events-none">
+                            </div>
+
+                            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+                                    <!-- Brand -->
+                                    <div>
+                                        <div class="flex items-center space-x-3 mb-6">
+                                            <img src="../logo.png" alt="FatalPast" class="h-12 w-12 object-contain">
+                                            <div>
+                                                <h2 class="text-2xl font-bold text-white font-serif">FatalPast</h2>
+                                                <p class="text-zinc-600 text-xs font-mono tracking-widest">Dark History
+                                                    Archive</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-zinc-400 text-sm leading-relaxed">The premier digital archive for
+                                            historical investigations, unsolved mysteries, and true crime documentation.
+                                            Educational focus, premium content.</p>
+                                    </div>
+
+                                    <!-- Cases Link -->
+                                    <div>
+                                        <h3
+                                            class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-b border-red-600/30 pb-3">
+                                            Featured Cases</h3>
+                                        <ul class="space-y-3">
+                                            <li><a href="../jacktheripper.html"
+                                                    class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Jack the Ripper</span>
+                                                </a></li>
+                                            <li><a href="#"
+                                                    class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Zodiac Killer</span>
+                                                </a></li>
+                                            <li><a href="#"
+                                                    class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Black Dahlia</span>
+                                                </a></li>
+                                            <li><a href="../cases.html"
+                                                    class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Explore All</span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Community Link -->
+                                    <div>
+                                        <h3
+                                            class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-b border-cyan-600/30 pb-3">
+                                            Community</h3>
+                                        <ul class="space-y-3">
+                                            <li><a href="https://discord.gg/fatalpast" target="_blank"
+                                                    class="text-zinc-400 hover:text-cyan-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Discord Server</span>
+                                                </a></li>
+                                            <li><a href="https://youtube.com/fatalpast" target="_blank"
+                                                    class="text-zinc-400 hover:text-red-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">YouTube</span>
+                                                </a></li>
+                                            <li><a href="https://instagram.com/fatalpast" target="_blank"
+                                                    class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Instagram</span>
+                                                </a></li>
+                                            <li><a href="https://tiktok.com/@fatalpast" target="_blank"
+                                                    class="text-zinc-400 hover:text-cyan-400 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">TikTok</span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Legal Links -->
+                                    <div>
+                                        <h3
+                                            class="text-white font-bold mb-6 uppercase text-sm tracking-widest border-b border-purple-600/30 pb-3">
+                                            Legal</h3>
+                                        <ul class="space-y-3">
+                                            <li><a href="../privacy.html"
+                                                    class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Privacy Policy</span>
+                                                </a></li>
+                                            <li><a href="../terms.html"
+                                                    class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Terms of Use</span>
+                                                </a></li>
+                                            <li><a href="../contact.html"
+                                                    class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Contact</span>
+                                                </a></li>
+                                            <li><a href="../disclaimer.html"
+                                                    class="text-zinc-400 hover:text-purple-500 text-sm transition-colors flex items-center group">
+                                                    <i
+                                                        class="fas fa-arrow-right mr-2 opacity-0 group-hover:opacity-100 transition-opacity -ml-4"></i>
+                                                    <span class="group-hover:ml-2 transition-all">Disclaimer</span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Footer Bottom -->
+                                <div class="border-t border-white/5 pt-8 md:pt-12">
+                                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                                        <p class="text-zinc-600 text-sm text-center md:text-left">© 2024 FatalPast. All
+                                            rights reserved. Content for historical and educational purposes.
+                                            Documenting history's darkest chapters.</p>
+                                        <div class="flex items-center space-x-6">
+                                            <a href="https://discord.gg/fatalpast" target="_blank"
+                                                class="text-zinc-500 hover:text-blue-500 hover:scale-125 transition-all duration-300">
+                                                <i class="fab fa-discord text-xl"></i>
+                                            </a>
+                                            <a href="https://youtube.com/fatalpast" target="_blank"
+                                                class="text-zinc-500 hover:text-red-500 hover:scale-125 transition-all duration-300">
+                                                <i class="fab fa-youtube text-xl"></i>
+                                            </a>
+                                            <a href="https://instagram.com/fatalpast" target="_blank"
+                                                class="text-zinc-500 hover:text-purple-500 hover:scale-125 transition-all duration-300">
+                                                <i class="fab fa-instagram text-xl"></i>
+                                            </a>
+                                            <a href="https://tiktok.com/@fatalpast" target="_blank"
+                                                class="text-zinc-500 hover:text-cyan-400 hover:scale-125 transition-all duration-300">
+                                                <i class="fab fa-tiktok text-xl"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+
+                        <button id="backToTop"
+                            class="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition-colors z-40 hidden"
+                            aria-label="Back to top">
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+
+                        <div id="loadingOverlay"
+                            class="fixed inset-0 bg-black/98 flex items-center justify-center z-[100] opacity-0 invisible backdrop-blur-md transition-all duration-500">
+                            <div class="scan-line"></div>
+                            <div class="spinner-container">
+                                <div class="spinner">
+                                    <i class="fas fa-skull spinner-icon"></i>
+                                </div>
+                                <div class="loading-text">
+                                    <div class="loading-status">Loading Evidence...</div>
+                                    <div class="loading-progress">
+                                        <div class="loading-progress-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h2 class="text-xl font-display font-bold text-white">FatalPast</h2>
-                            <p class="text-zinc-600 text-xs mono">Dark History Archive</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">
-                        Comprehensive digital archive of history's unsolved mysteries.
-                    </p>
-                </div>
 
-                <div>
-                    <h3 class="text-white font-bold mb-4">Cases</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/case/jack-the-ripper"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Jack the Ripper</a>
-                        </li>
-                        <li><a href="/case/zodiac-killer"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Zodiac Killer</a>
-                        </li>
-                        <li><a href="/case/black-dahlia"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Black Dahlia</a></li>
-                        <li><a href="/case/son-of-sam"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Son of Sam</a></li>
-                    </ul>
-                </div>
+                        <script src="../app.js"></script>
+                        <script>
+                            async function loadRelatedCases() {
+                                try {
+                                    const response = await fetch('../cases.json');
+                                    const allCases = await response.json();
+                                    // Dynamically get current case name from URL or a data attribute if available
+                                    // For this example, we'll hardcode it as per the instruction's context
+                                    const currentCaseName = "Jack the Ripper";
 
-                <div>
-                    <h3 class="text-white font-bold mb-4">Community</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://discord.gg/fatalpast" target="_blank"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Discord Server</a>
-                        </li>
-                        <li><a href="https://youtube.com/fatalpast" target="_blank"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">YouTube Channel</a>
-                        </li>
-                        <li><a href="https://instagram.com/fatalpast" target="_blank"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Instagram</a></li>
-                        <li><a href="/newsletter"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Newsletter</a></li>
-                    </ul>
-                </div>
+                                    const currentCase = allCases.find(c => c.name === currentCaseName);
+                                    if (!currentCase) return;
 
-                <div>
-                    <h3 class="text-white font-bold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/privacy"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Privacy Policy</a>
-                        </li>
-                        <li><a href="/terms" class="text-gray-400 hover:text-red-500 text-sm transition-colors">Terms of
-                                Use</a></li>
-                        <li><a href="/contact"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Contact</a></li>
-                        <li><a href="/disclaimer"
-                                class="text-gray-400 hover:text-red-500 text-sm transition-colors">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
+                                    // Filter related cases (same type or era, excluding current)
+                                    let finalCases = allCases.filter(c =>
+                                        c.name !== currentCaseName &&
+                                        (c.type === currentCase.type || c.era === currentCase.era)
+                                    );
 
-            <div class="border-t border-white/5 pt-8 text-center">
-                <p class="text-zinc-600 text-sm mono">
-                    © 2024 FatalPast. All rights reserved. Content for historical research purposes.
-                </p>
-            </div>
-        </div>
-    </footer>
+                                    // If not enough, add others
+                                    if (finalCases.length < 3) {
+                                        const others = allCases.filter(c => c.name !== currentCaseName && !finalCases.includes(c));
+                                        finalCases.push(...others);
+                                    }
 
-    <button id="backToTop"
-        class="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition-colors z-40 hidden"
-        aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+                                    // Shuffle and take first 3
+                                    finalCases = finalCases.sort(() => Math.random() - 0.5).slice(0, 3);
 
-    <div id="loadingOverlay"
-        class="fixed inset-0 bg-black/98 flex items-center justify-center z-50 opacity-0 invisible backdrop-blur-md">
-        <div class="spinner"></div>
-    </div>
+                                    const grid = document.getElementById('relatedCasesGrid');
+                                    if (!grid) return;
 
-    <script src="../app.js"></script>
-    <script>
-        async function loadRelatedCases() {
-            try {
-                const response = await fetch('../cases.json');
-                const allCases = await response.json();
-                // Dynamically get current case name from URL or a data attribute if available
-                // For this example, we'll hardcode it as per the instruction's context
-                const currentCaseName = "Jack the Ripper";
-
-                const currentCase = allCases.find(c => c.name === currentCaseName);
-                if (!currentCase) return;
-
-                // Filter related cases (same type or era, excluding current)
-                let finalCases = allCases.filter(c =>
-                    c.name !== currentCaseName &&
-                    (c.type === currentCase.type || c.era === currentCase.era)
-                );
-
-                // If not enough, add others
-                if (finalCases.length < 3) {
-                    const others = allCases.filter(c => c.name !== currentCaseName && !finalCases.includes(c));
-                    finalCases.push(...others);
-                }
-
-                // Shuffle and take first 3
-                finalCases = finalCases.sort(() => Math.random() - 0.5).slice(0, 3);
-
-                const grid = document.getElementById('relatedCasesGrid');
-                if (!grid) return;
-
-                grid.innerHTML = finalCases.map(c => `
+                                    grid.innerHTML = finalCases.map(c => `
                     <a href="${c.link.startsWith('cases/') ? '../' + c.link : c.link}" class="case-card glass p-6 rounded-xl border border-white/10 hover:border-red-500/30 transition-colors group">
                         <div class="flex items-center justify-between mb-3">
                             <span class="px-2 py-1 bg-red-900/30 text-red-400 text-xs font-bold rounded">${c.year}</span>
@@ -730,20 +896,20 @@
                         <p class="text-zinc-400 text-sm">${c.description}</p>
                     </a>
                 `).join('');
-            } catch (error) {
-                console.error('Error loading related cases:', error);
-            }
-        }
+                                } catch (error) {
+                                    console.error('Error loading related cases:', error);
+                                }
+                            }
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            loadRelatedCases();
-            console.log('FatalPast Archive - Dark History Database');
+                            // Initialize on page load
+                            document.addEventListener('DOMContentLoaded', function () {
+                                loadRelatedCases();
+                                console.log('FatalPast Archive - Dark History Database');
 
-            // Add loading class to body for initial animations
-            document.body.classList.add('loaded');
-        });
-    </script>
+                                // Add loading class to body for initial animations
+                                document.body.classList.add('loaded');
+                            });
+                        </script>
 </body>
 
 </html>

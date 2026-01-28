@@ -7,9 +7,9 @@
         "type": "Serial Killer",
         "region": "Europe",
         "location": "London",
-        "description": "The most notorious unsolved murders in history. Five brutal killings in Whitechapel.",
+        "description": "The most notorious unsolved murders in history. Five brutal killings that sparked the modern investigation techniques.",
         "link": "cases/jacktheripper.html",
-        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+        "image": "https://images.huffingtonpost.com/2016-03-10-1457627205-2416058-JacktheRipper_Maybrick-thumb.jpg"
     },
     {
         "id": 2,
@@ -19,9 +19,9 @@
         "type": "Serial Killer",
         "region": "USA",
         "location": "California",
-        "description": "An elusive serial killer who taunted authorities with cryptic ciphers. Never caught.",
+        "description": "An elusive serial killer who taunted authorities with cryptic ciphers. Never caught, forever mysterious.",
         "link": "#",
-        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Zodiac-Killer.jpg/250px-Zodiac-Killer.jpg"
     },
     {
         "id": 3,
@@ -31,9 +31,9 @@
         "type": "Unsolved",
         "region": "USA",
         "location": "Los Angeles",
-        "description": "One of America's most infamous unsolved murders. A young actress brutally killed.",
+        "description": "One of America's most infamous unsolved murders. A young actress brutally killed in Hollywood's golden age.",
         "link": "#",
-        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Elizabeth_Short_photo_from_police_bulletin.jpg/250px-Elizabeth_Short_photo_from_police_bulletin.jpg"
     },
     {
         "id": 4,
@@ -43,9 +43,9 @@
         "type": "Serial Killer",
         "region": "USA",
         "location": "New York",
-        "description": "David Berkowitz terrorized New York with random shootings. An unprecedented manhunt.",
+        "description": "David Berkowitz terrorized New York City with a series of random shootings. An unprecedented manhunt ensued.",
         "link": "#",
-        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/David_Berkowitz.jpg/250px-David_Berkowitz.jpg"
     },
     {
         "id": 5,
@@ -55,9 +55,9 @@
         "type": "Serial Killer",
         "region": "USA",
         "location": "United States",
-        "description": "Ted Kaczynski's campaign of mail bombings terrorized America for 17 years.",
+        "description": "Ted Kaczynski's campaign of mail bombings terrorized America for 17 years. A cautionary tale of extremism.",
         "link": "#",
-        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Ted_Kaczynski_2_%28cropped%29.jpg/250px-Ted_Kaczynski_2_%28cropped%29.jpg"
     },
     {
         "id": 6,
@@ -67,8 +67,9 @@
         "type": "Serial Killer",
         "region": "USA",
         "location": "Kansas",
-        "description": "Dennis Rader evaded capture for 31 years before his digital mistake.",
+        "description": "Dennis Rader evaded capture for 31 years before his digital mistake. A masterclass in criminal profiling.",
         "link": "#",
-        "image": "https://images.unsplash.com/photo-1578881999319-7a0373be7e64?auto=format&fit=crop&q=80&w=500"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/DennisRader.jpg/250px-DennisRader.jpg"
     }
 ]
+
