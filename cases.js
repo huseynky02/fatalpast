@@ -39,7 +39,17 @@ function renderCases() {
         <a href="${c.link}" class="case-card group relative rounded-2xl border border-white/20 overflow-hidden transition-all duration-500 hover:border-red-500/60 hover:shadow-2xl hover:shadow-red-600/20" style="animation: slideInUp 0.6s ease-out backwards; animation-delay: ${idx * 0.08}s;">
             <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <img src="${c.image}" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="${c.name}">
+            
+            <div class="case-image-wrapper">
+                <div class="exclusive-overlay">
+                    <div class="exclusive-badge">Exclusive Content</div>
+                    <button class="reveal-btn" onclick="event.preventDefault(); event.stopPropagation(); this.closest('.case-image-wrapper').classList.add('revealed')">
+                        View Evidence
+                    </button>
+                </div>
+                <img src="${c.image}" class="exclusive-blur w-full h-full object-cover" alt="${c.name}">
+            </div>
+
             <div class="relative z-10 p-6">
                 <div class="mb-4 flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-gradient-to-r from-red-600/40 to-red-900/30 text-red-300 text-xs font-bold rounded-full border border-red-500/40">${c.year}</span>

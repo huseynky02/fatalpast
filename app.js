@@ -262,9 +262,17 @@ function initFeaturedCases() {
                         class="absolute inset-0 border-t-2 border-l-2 border-red-600/40 group-hover:border-red-600/80 transition-all duration-500 rounded-xl">
                     </div>
 
-                    <img src="${c.image}"
-                        class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700 grayscale group-hover:grayscale-0"
-                        alt="${c.name}">
+                    <div class="case-image-wrapper h-full w-full">
+                        <div class="exclusive-overlay">
+                            <div class="exclusive-badge">Exclusive Content</div>
+                            <button class="reveal-btn" onclick="event.preventDefault(); event.stopPropagation(); this.closest('.case-image-wrapper').classList.add('revealed')">
+                                View Evidence
+                            </button>
+                        </div>
+                        <img src="${c.image}"
+                            class="exclusive-blur w-full h-full object-cover group-hover:scale-125 transition-all duration-700"
+                            alt="${c.name}">
+                    </div>
 
                     <div class="absolute inset-0 flex flex-col justify-between p-4 md:p-6 z-20">
                         <div>
