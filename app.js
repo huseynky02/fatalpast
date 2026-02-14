@@ -89,73 +89,6 @@ function initScrollEffects() {
     }
 }
 
-function initLoadingOverlay() {
-    const overlay = document.getElementById('loadingOverlay');
-    const spinner = overlay?.querySelector('.spinner');
-    const statusText = overlay?.querySelector('.loading-status');
-    const loadingProgress = overlay?.querySelector('.loading-progress-bar');
-
-    if (!overlay) return;
-
-    const messages = [
-        "Analyzing Case Files...",
-        "Retrieving Evidence...",
-        "Scanning Archive...",
-        "Accessing Dossier...",
-        "Processing Forensic Data..."
-    ];
-
-    const hideOverlay = () => {
-        setTimeout(() => {
-            overlay.classList.remove('show');
-            document.body.style.overflow = 'auto';
-        }, 500);
-    };
-
-    if (document.readyState === 'complete') {
-        hideOverlay();
-    } else {
-        window.addEventListener('load', hideOverlay);
-    }
-
-    document.addEventListener('click', (e) => {
-        const link = e.target.closest('a');
-        if (link && link.href && !link.target && !e.ctrlKey && !e.shiftKey && !e.metaKey) {
-            const href = link.getAttribute('href');
-            const url = new URL(link.href);
-            const isInternal = url.hostname === window.location.hostname;
-            const isAnchor = href.startsWith('#');
-            const isSpecial = href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:');
-
-            if (isInternal && !isAnchor && !isSpecial) {
-                e.preventDefault();
-
-                if (statusText) {
-                    statusText.innerText = messages[Math.floor(Math.random() * messages.length)];
-                }
-
-                overlay.classList.add('show');
-                document.body.style.overflow = 'hidden';
-
-                const randomDelay = 500 + Math.random() * 4500;
-
-                if (loadingProgress) {
-                    loadingProgress.style.width = '0%';
-                    loadingProgress.style.transition = `width ${randomDelay}ms linear`;
-                    setTimeout(() => {
-                        loadingProgress.style.width = '100%';
-                    }, 50);
-                }
-
-                setTimeout(() => {
-                    window.location.href = link.href;
-                }, randomDelay);
-            }
-        }
-    });
-    console.log('FatalPast Loading Overlay Initialized');
-}
-
 function initSmoothAnchors() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -263,14 +196,8 @@ function initFeaturedCases() {
                     </div>
 
                     <div class="case-image-wrapper h-full w-full">
-                        <div class="exclusive-overlay">
-                            <div class="exclusive-badge">Exclusive Content</div>
-                            <button class="reveal-btn" onclick="event.preventDefault(); event.stopPropagation(); this.closest('.case-image-wrapper').classList.add('revealed')">
-                                View Evidence
-                            </button>
-                        </div>
                         <img src="${c.image}"
-                            class="exclusive-blur w-full h-full object-cover group-hover:scale-125 transition-all duration-700"
+                            class="w-full h-full object-cover group-hover:scale-125 transition-all duration-700"
                             alt="${c.name}">
                     </div>
 
@@ -306,7 +233,6 @@ function initFeaturedCases() {
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initScrollEffects();
-    initLoadingOverlay();
     initSmoothAnchors();
     initSecurity();
     initLazyLoad();

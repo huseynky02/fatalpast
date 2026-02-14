@@ -41,13 +41,7 @@ function renderCases() {
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <div class="case-image-wrapper">
-                <div class="exclusive-overlay">
-                    <div class="exclusive-badge">Exclusive Content</div>
-                    <button class="reveal-btn" onclick="event.preventDefault(); event.stopPropagation(); this.closest('.case-image-wrapper').classList.add('revealed')">
-                        View Evidence
-                    </button>
-                </div>
-                <img src="${c.image}" class="exclusive-blur w-full h-full object-cover" alt="${c.name}">
+                <img src="${c.image}" class="w-full h-full object-cover" alt="${c.name}">
             </div>
 
             <div class="relative z-10 p-6">
