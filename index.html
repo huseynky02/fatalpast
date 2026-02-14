@@ -523,7 +523,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
                 <!-- Discord Widget -->
                 <div class="group relative overflow-hidden rounded-xl p-8 md:p-12 feature-card"
                     style="animation-delay: 0.1s;">
@@ -597,23 +597,90 @@
                 </div>
 
                 <!-- Social Links -->
-                <div class="lg:col-span-1 lg:mt-0 mt-12">
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="flex items-center space-x-6">
-                            <a href="https://www.youtube.com/@FatalPastArchive" target="_blank"
-                                class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 hover:text-red-500 hover:border-red-500/40 hover:bg-red-600/10 transition-all duration-300">
-                                <i class="fab fa-youtube text-2xl"></i>
-                            </a>
-                            <a href="https://www.instagram.com/fatal.past" target="_blank"
-                                class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 hover:text-purple-500 hover:border-purple-500/40 hover:bg-purple-600/10 transition-all duration-300">
-                                <i class="fab fa-instagram text-2xl"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@fatal.past" target="_blank"
-                                class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 hover:text-cyan-400 hover:border-cyan-500/40 hover:bg-cyan-600/10 transition-all duration-300">
-                                <i class="fab fa-tiktok text-2xl"></i>
-                            </a>
+                <div class="lg:col-span-1 lg:mt-0 mt-12 flex flex-col h-full gap-6">
+                    <a href="https://www.youtube.com/@FatalPastArchive" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-6 md:p-8 feature-card flex flex-col justify-between flex-1">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-red-600/20 transition-all duration-500">
                         </div>
-                    </div>
+                        <div
+                            class="absolute inset-0 border border-red-600/30 group-hover:border-red-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex items-center">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-red-600/40 to-red-700/30 rounded-xl flex items-center justify-center border border-red-600/40 group-hover:from-red-600/60 group-hover:to-red-700/50 transition-all">
+                                <i class="fab fa-youtube text-red-400 text-2xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3
+                                    class="text-2xl font-bold text-white font-serif group-hover:text-red-400 transition-colors">
+                                    YouTube</h3>
+                                <p class="text-red-400 font-semibold text-sm">Full Archives & Deep Dives</p>
+                            </div>
+                        </div>
+                        <div
+                            class="relative z-10 flex items-center text-red-400 font-semibold text-sm mt-6 group-hover:text-red-300 transition-colors">
+                            <span>Open Channel</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/fatal.past" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-6 md:p-8 feature-card flex flex-col justify-between flex-1">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-purple-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-purple-600/30 group-hover:border-purple-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex items-center">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-purple-600/40 to-purple-700/30 rounded-xl flex items-center justify-center border border-purple-600/40 group-hover:from-purple-600/60 group-hover:to-purple-700/50 transition-all">
+                                <i class="fab fa-instagram text-purple-400 text-2xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3
+                                    class="text-2xl font-bold text-white font-serif group-hover:text-purple-400 transition-colors">
+                                    Instagram</h3>
+                                <p class="text-purple-400 font-semibold text-sm">Reels & Case Highlights</p>
+                            </div>
+                        </div>
+                        <div
+                            class="relative z-10 flex items-center text-purple-400 font-semibold text-sm mt-6 group-hover:text-purple-300 transition-colors">
+                            <span>Follow</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@fatal.past" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-6 md:p-8 feature-card flex flex-col justify-between flex-1">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-cyan-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-cyan-600/30 group-hover:border-cyan-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex items-center">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-cyan-600/40 to-cyan-700/30 rounded-xl flex items-center justify-center border border-cyan-600/40 group-hover:from-cyan-600/60 group-hover:to-cyan-700/50 transition-all">
+                                <i class="fab fa-tiktok text-cyan-400 text-2xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h3
+                                    class="text-2xl font-bold text-white font-serif group-hover:text-cyan-400 transition-colors">
+                                    TikTok</h3>
+                                <p class="text-cyan-400 font-semibold text-sm">Quick Cases & Crime Fix</p>
+                            </div>
+                        </div>
+                        <div
+                            class="relative z-10 flex items-center text-cyan-400 font-semibold text-sm mt-6 group-hover:text-cyan-300 transition-colors">
+                            <span>Watch</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
