@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHCLS5XVKB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WHCLS5XVKB');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Killer | FatalPast Digital Archive</title>
+    <meta name="description"
+        content="Complete Zodiac Killer case file (1968–1970). Victims, letters, ciphers, timelines, evidence, suspect theories, and modern cryptanalysis.">
+    <meta name="keywords"
+        content="Zodiac Killer, San Francisco Bay Area, letters, ciphers, Z340, Z408, Lake Berryessa, Presidio Heights, unsolved case">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fatalpast.com/cases/zodiac.html">
+    <meta property="og:title" content="Zodiac Killer | FatalPast Digital Archive">
+    <meta property="og:description"
+        content="Step-by-step dossier: the attacks, the ciphers, the letters, and why the case still refuses to close.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=1200">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fatalpast.com/cases/zodiac.html">
+    <meta property="twitter:title" content="Zodiac Killer | FatalPast Digital Archive">
+    <meta property="twitter:description"
+        content="Step-by-step dossier: the attacks, the ciphers, the letters, and why the case still refuses to close.">
+    <meta property="twitter:image"
+        content="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=1200">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;600;700&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: none;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-backdrop {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+            display: none;
+        }
+
+        .mobile-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        @media (max-width: 768px) {
+
+            .mobile-menu,
+            .mobile-backdrop {
+                will-change: transform, opacity;
+                display: none;
+            }
+
+            #mobileMenuButton {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-red-900 selection:text-white font-sans bg-black text-zinc-200 overflow-x-hidden"
+    style="background-image: radial-gradient(circle at 10% 20%, rgba(255, 0, 51, 0.02), transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 229, 255, 0.015), transparent 40%); background-color: #0a0a0a;">
+
+    <div class="fixed top-0 left-0 w-full h-1 z-50 bg-black/40">
+        <div id="progress-bar"
+            class="h-full bg-gradient-to-r from-neon-red to-red-900 w-0 shadow-neon transition-all duration-100">
+        </div>
+    </div>
+
+    <nav class="border-b border-white/10 bg-black/95 sticky top-0 z-50 backdrop-blur-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-4 group">
+                <img src="../logo.png" alt="FatalPast"
+                    class="h-12 w-12 object-contain hover:opacity-80 transition-opacity">
+                <div>
+                    <span
+                        class="text-3xl font-bold font-serif text-red-600 tracking-tighter uppercase neon-text group-hover:text-red-500 transition-colors">FatalPast</span>
+                    <span class="block text-[10px] font-mono text-zinc-700 tracking-[0.2em]">Dark History
+                        Archive</span>
+                </div>
+            </a>
+
+            <div
+                class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300 items-center">
+                <a href="../cases.html" class="hover:text-white transition-all">Cases</a>
+                <a href="../about.html" class="hover:text-white transition-all">About Us</a>
+                <a href="https://discord.gg/fatalpast" target="_blank"
+                    class="bg-red-600/10 border border-red-600/50 text-red-500 px-6 py-2 rounded-full hover:bg-red-600 hover:text-white transition-all">
+                    <i class="fab fa-discord mr-2"></i>Discord
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-4 md:hidden">
+                <a href="https://discord.gg/fatalpast" target="_blank"
+                    class="bg-red-600/10 border border-red-600/50 text-red-500 px-4 py-2 rounded-full hover:bg-red-600 hover:text-white transition-all text-xs font-bold uppercase tracking-wider">
+                    <i class="fab fa-discord mr-1"></i>Discord
+                </a>
+            </div>
+
+            <button id="mobileMenuButton" class="hidden" aria-label="Open mobile menu"></button>
+        </div>
+
+        <div id="mobileBackdrop"
+            class="mobile-backdrop fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden opacity-0 invisible transition-all duration-300 ease-out">
+        </div>
+
+        <div id="mobileMenu"
+            class="mobile-menu fixed inset-y-0 right-0 w-72 bg-gradient-to-b from-black/95 via-black/98 to-black backdrop-blur-xl z-50 p-6 md:hidden border-l border-red-600/20 transform transition-all duration-300 ease-out">
+            <div class="flex justify-between items-center mb-8 pb-6 border-b border-zinc-800/50">
+                <h2 class="text-2xl font-bold text-white font-serif">Menu</h2>
+                <button id="closeMobileMenu"
+                    class="text-zinc-400 hover:text-red-500 hover:scale-110 transition-all duration-300 relative w-8 h-8 flex items-center justify-center"
+                    aria-label="Close mobile menu">
+                    <span class="absolute w-5 h-0.5 bg-current transform rotate-45"></span>
+                    <span class="absolute w-5 h-0.5 bg-current transform -rotate-45"></span>
+                </button>
+            </div>
+
+            <div class="space-y-3">
+                <a href="../cases.html"
+                    class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-red-500 hover:bg-red-600/10 transition-all duration-300 border border-transparent hover:border-red-600/30">
+                    <i class="fas fa-folder text-red-500/70 group-hover:text-red-500 transition-colors"></i>
+                    <span class="font-semibold tracking-wide">Cases</span>
+                    <i
+                        class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-red-500"></i>
+                </a>
+                <a href="../about.html"
+                    class="group flex items-center space-x-3 px-4 py-3 rounded-lg text-zinc-300 hover:text-cyan-400 hover:bg-cyan-600/10 transition-all duration-300 border border-transparent hover:border-cyan-600/30">
+                    <i class="fas fa-info-circle text-cyan-400/70 group-hover:text-cyan-400 transition-colors"></i>
+                    <span class="font-semibold tracking-wide">About Us</span>
+                    <i
+                        class="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-cyan-400"></i>
+                </a>
+
+                <div class="pt-6 mt-6 border-t border-zinc-800/50">
+                    <a href="https://discord.gg/fatalpast" target="_blank"
+                        class="flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-bold uppercase tracking-widest text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105">
+                        <i class="fab fa-discord text-lg"></i>
+                        <span>Join Discord</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-black">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=2000"
+                class="w-full h-full object-cover opacity-25 grayscale brightness-[0.3] hover:brightness-[0.4] transition-all duration-1000 lazy-load"
+                alt="San Francisco night skyline" loading="lazy">
+        </div>
+
+        <div
+            class="absolute top-20 left-10 w-96 h-96 bg-red-600/10 rounded-full filter blur-3xl animate-pulse opacity-40">
+        </div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600/5 rounded-full filter blur-3xl animate-pulse opacity-30"
+            style="animation-delay: 2s;"></div>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+        <div class="relative max-w-5xl mx-auto px-6 w-full text-center z-10">
+            <div class="inline-flex items-center space-x-3 mb-8 badge badge-primary group">
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                <span class="text-red-400 text-xs font-bold uppercase tracking-widest font-mono">🔴 Case File
+                    #ZOD-1968</span>
+            </div>
+
+            <h1
+                class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-serif text-white leading-tight mb-6 tracking-tight hero-title header-shine">
+                The <span class="gradient-text font-black drop-shadow-lg">Zodiac</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-zinc-300 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
+                A killer who didn’t only hunt people — he hunted attention. Between 1968 and 1970, the Bay Area
+                received a chain of attacks, letters, and ciphers that turned murder into a public performance.
+                <span class="text-neon-red font-semibold">This dossier reconstructs the story step by step.</span>
+            </p>
+
+            <div class="flex justify-center mt-12 animate-bounce">
+                <i class="fas fa-chevron-down text-red-500/50 text-2xl"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 relative content-grid">
+
+        <article class="lg:col-span-8 space-y-20">
+
+            <section id="overview" class="clearfix">
+                <div class="flex items-end mb-8">
+                    <h2 class="text-4xl font-bold text-white serif section-title">01. The Pattern Emerges</h2>
+                    <span class="ml-6 h-px flex-grow bg-zinc-800 mb-2"></span>
+                </div>
+
+                <figure class="wiki-img-container evidence group">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <div class="exclusive-overlay">
+                            <div class="exclusive-badge">Exclusive Content</div>
+                            <button class="reveal-btn" onclick="this.closest('.wiki-img-container').classList.add('revealed')">
+                                View Evidence
+                            </button>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Zodiac-Killer.jpg/800px-Zodiac-Killer.jpg"
+                            alt="Police composite sketch of the Zodiac Killer" 
+                            class="exclusive-blur w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 lazy-load"
+                            loading="lazy">
+                        <div
+                            class="absolute top-3 right-3 bg-red-600 text-white text-[9px] font-bold px-2 py-1 uppercase tracking-widest rounded shadow-lg shadow-red-900/50 z-20">
+                            Evidence #Z-1
+                        </div>
+                    </div>
+                    <figcaption class="wiki-caption">
+                        <span class="block text-zinc-200 font-bold serif text-sm mb-1">Composite Sketch</span>
+                        <div
+                            class="flex justify-between items-center text-[10px] text-zinc-500 font-mono uppercase mt-2">
+                            <span>Bay Area, 1969</span>
+                            <span class="text-zinc-600 border border-zinc-800 px-1 rounded">Src: Wikimedia</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <p class="text-lg text-zinc-300 font-light leading-relaxed mb-6">
+                    The Zodiac case becomes addictive because it never gives you a clean ending. You get a chain of
+                    scenes: isolated lovers’ lanes, a lake at dusk, a city street. Then the second layer: letters.
+                    Ciphers. A symbol. A voice that insists on being read.
+                </p>
+
+                <div class="glass border-l-4 border-cyan-500 p-6 my-10 bg-cyan-900/5">
+                    <div class="flex items-center space-x-3 mb-2 text-cyan-400">
+                        <i class="fas fa-sticky-note"></i>
+                        <span class="text-xs font-bold uppercase tracking-widest mono">Staff Note</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm italic leading-relaxed mono">
+                        This page focuses on reconstruction and sources. Many "solutions" and identity claims exist
+                        online — we link to primary documents and reputable analysis where possible.
+                    </p>
+                </div>
+            </section>
+
+            <section id="timeline" class="clearfix">
+                <div class="flex items-end mb-8">
+                    <h2 class="text-4xl font-bold text-white serif section-title">02. Timeline (1968–1970)</h2>
+                    <span class="ml-6 h-px flex-grow bg-zinc-800 mb-2"></span>
+                </div>
+
+                <div class="space-y-5">
+                    <div class="case-card glass p-6 rounded-2xl border border-white/10">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Dec 20, 1968 — Lake Herman Road</h4>
+                                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                                    David Faraday (17) and Betty Lou Jensen (16) are shot near Benicia/Vallejo.
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-red-600/20 text-red-400 text-xs font-bold rounded">Attack #1</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card glass p-6 rounded-2xl border border-white/10">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Jul 4, 1969 — Blue Rock Springs</h4>
+                                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                                    Darlene Ferrin is killed; Michael Mageau survives and later describes the attacker.
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-red-600/20 text-red-400 text-xs font-bold rounded">Attack #2</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card glass p-6 rounded-2xl border border-white/10">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Aug 1969 — The letters begin</h4>
+                                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                                    Newspapers receive letters and the 408-character cipher (“Z408”). The writer demands
+                                    publication and claims credit.
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-cyan-600/20 text-cyan-300 text-xs font-bold rounded">Media</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card glass p-6 rounded-2xl border border-white/10">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Sep 27, 1969 — Lake Berryessa</h4>
+                                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                                    Bryan Hartnell and Cecilia Shepard are attacked at the lake. The suspect wears a
+                                    hooded costume with the Zodiac symbol.
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-red-600/20 text-red-400 text-xs font-bold rounded">Attack #3</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card glass p-6 rounded-2xl border border-white/10">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Oct 11, 1969 — Presidio Heights</h4>
+                                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                                    Taxi driver Paul Stine is killed in San Francisco. A letter later includes a piece
+                                    of Stine’s shirt.
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-red-600/20 text-red-400 text-xs font-bold rounded">Attack #4</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card glass p-6 rounded-2xl border border-white/10">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Nov 1969 — The 340 cipher (“Z340”)</h4>
+                                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
+                                    A longer cipher arrives. It will not be publicly solved until 2020.
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-300 text-xs font-bold rounded">Cipher</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="letters" class="clearfix">
+                <div class="flex items-end mb-8">
+                    <h2 class="text-4xl font-bold text-white serif section-title">03. The Letters & The Voice</h2>
+                    <span class="ml-6 h-px flex-grow bg-zinc-800 mb-2"></span>
+                </div>
+
+                <figure
+                    class="evidence group md:float-left md:w-[40%] w-full md:mr-8 mb-8 mt-2 rounded-xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
+                    <div class="relative overflow-hidden aspect-[3/4]">
+                        <div class="exclusive-overlay">
+                            <div class="exclusive-badge">Restricted</div>
+                            <button class="reveal-btn" onclick="this.closest('.evidence').classList.add('revealed')">
+                                Reveal
+                            </button>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Zodiac_Killer_letter%2C_1969-08-04.jpg/800px-Zodiac_Killer_letter%2C_1969-08-04.jpg"
+                            alt="Zodiac letter (Aug 4, 1969)" class="exclusive-blur w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <figcaption class="wiki-caption text-right">
+                        <span class="block text-zinc-200 font-bold serif text-sm mb-1">Letter (Aug 4, 1969)</span>
+                        <div class="text-[10px] text-zinc-500 font-mono uppercase mt-1">
+                            Src: Wikimedia
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <p class="text-lg text-zinc-300 font-light leading-relaxed mb-6">
+                    The Zodiac doesn’t just claim murders — he stages them. The letters are a second crime scene: they
+                    build a persona, challenge police, threaten mass violence, and bait the public into decoding.
+                </p>
+                <p class="text-lg text-zinc-300 font-light leading-relaxed mb-6">
+                    This is why the case keeps people on the page: every letter feels like a cliffhanger, every cipher
+                    like a locked door. The narrative is engineered to keep the investigation alive.
+                </p>
+
+                <div class="glass p-6 rounded-2xl border border-white/10">
+                    <h4 class="text-white font-bold text-lg mb-3">Primary-source hubs</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li>
+                            <a class="text-red-400 hover:text-red-300 transition-colors" target="_blank"
+                                href="https://en.wikipedia.org/wiki/Zodiac_Killer">Wikipedia overview (quick map + citations)</a>
+                        </li>
+                        <li>
+                            <a class="text-red-400 hover:text-red-300 transition-colors" target="_blank"
+                                href="https://www.zodiackiller.com/Letters.html">ZodiacKiller.com: letters archive</a>
+                        </li>
+                        <li>
+                            <a class="text-red-400 hover:text-red-300 transition-colors" target="_blank"
+                                href="https://www.zodiackillerfacts.com/zodiac-letters/">ZodiacKillerFacts: letters index</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ciphers" class="clearfix">
+                <div class="flex items-end mb-8">
+                    <h2 class="text-4xl font-bold text-white serif section-title">04. Ciphers: Z408 and Z340</h2>
+                    <span class="ml-6 h-px flex-grow bg-zinc-800 mb-2"></span>
+                </div>
+
+                <figure class="wiki-img-container evidence group md:float-right md:w-[45%] w-full md:ml-8 mb-8 mt-2">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="exclusive-overlay">
+                            <div class="exclusive-badge">Cipher</div>
+                            <button class="reveal-btn" onclick="this.closest('.wiki-img-container').classList.add('revealed')">
+                                View
+                            </button>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Zodiac_Killer_cipher_340.svg/1024px-Zodiac_Killer_cipher_340.svg.png"
+                            alt="Zodiac 340 cipher" class="exclusive-blur w-full h-full object-cover" loading="lazy">
+                        <div
+                            class="absolute top-3 right-3 bg-red-600 text-white text-[9px] font-bold px-2 py-1 uppercase tracking-widest rounded shadow-lg shadow-red-900/50 z-20">
+                            Evidence #Z-340
+                        </div>
+                    </div>
+                    <figcaption class="wiki-caption">
+                        <span class="block text-zinc-200 font-bold serif text-sm mb-1">The Z340 Cipher</span>
+                        <div class="flex justify-between items-center text-[10px] text-zinc-500 font-mono uppercase mt-2">
+                            <span>Sent: Nov 1969</span>
+                            <span class="text-zinc-600 border border-zinc-800 px-1 rounded">Src: Wikimedia</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <p class="text-lg text-zinc-300 font-light leading-relaxed mb-6">
+                    The first published cipher (“Z408”) was cracked within days by amateur codebreakers Donald and Bettye
+                    Harden. The longer “Z340” resisted thousands of attempts for decades.
+                </p>
+
+                <div class="glass border-l-4 border-red-600 p-6 my-10 bg-red-900/5">
+                    <div class="flex items-center space-x-3 mb-2 text-red-400">
+                        <i class="fas fa-key"></i>
+                        <span class="text-xs font-bold uppercase tracking-widest mono">Modern Breakthrough</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mono">
+                        In 2020, a team including David Oranchak, Sam Blake, and Jarl Van Eycke announced a solution to
+                        Z340. Reading the solution is a reminder: even when a door opens, the room may still be empty.
+                    </p>
+                </div>
+
+                <div class="glass p-6 rounded-2xl border border-white/10">
+                    <h4 class="text-white font-bold text-lg mb-3">Cipher analysis links</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li>
+                            <a class="text-cyan-300 hover:text-cyan-200 transition-colors" target="_blank"
+                                href="https://www.zodiackillerciphers.com/">ZodiacKillerCiphers.com (analysis + tools)</a>
+                        </li>
+                        <li>
+                            <a class="text-cyan-300 hover:text-cyan-200 transition-colors" target="_blank"
+                                href="https://en.wikipedia.org/wiki/Zodiac_Killer_ciphers">Wikipedia: Zodiac ciphers page</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="victims" class="clearfix">
+                <div class="flex items-end mb-8">
+                    <h2 class="text-4xl font-bold text-white serif section-title">05. Confirmed Victims</h2>
+                    <span class="ml-6 h-px flex-grow bg-zinc-800 mb-2"></span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="case-card glass p-6 rounded-2xl border-l-2 border-red-600">
+                        <h4 class="text-xl font-bold text-white">David Faraday & Betty Lou Jensen</h4>
+                        <p class="text-zinc-400 text-sm mt-2">Lake Herman Road — Dec 20, 1968</p>
+                    </div>
+                    <div class="case-card glass p-6 rounded-2xl border-l-2 border-red-600">
+                        <h4 class="text-xl font-bold text-white">Darlene Ferrin</h4>
+                        <p class="text-zinc-400 text-sm mt-2">Blue Rock Springs — Jul 4, 1969</p>
+                    </div>
+                    <div class="case-card glass p-6 rounded-2xl border-l-2 border-red-600">
+                        <h4 class="text-xl font-bold text-white">Paul Stine</h4>
+                        <p class="text-zinc-400 text-sm mt-2">Presidio Heights — Oct 11, 1969</p>
+                    </div>
+                    <div class="case-card glass p-6 rounded-2xl border-l-2 border-cyan-600">
+                        <h4 class="text-xl font-bold text-white">Survivors</h4>
+                        <p class="text-zinc-400 text-sm mt-2">Michael Mageau, Bryan Hartnell (survived); Cecilia Shepard later died</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="suspects" class="pt-8">
+                <div class="flex items-end mb-8">
+                    <h2 class="text-4xl font-bold text-white serif section-title">06. Suspect Field (High-level)</h2>
+                    <span class="ml-6 h-px flex-grow bg-zinc-800 mb-2"></span>
+                </div>
+
+                <p class="text-lg text-zinc-300 font-light leading-relaxed mb-8">
+                    The suspect list is a trap: it promises closure. This section stays high-level and avoids presenting
+                    any single person as “the” Zodiac without conclusive evidence.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="case-card glass p-6 rounded-2xl border-l-2 border-red-600">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-white">Arthur Leigh Allen</h4>
+                            <span class="px-2 py-1 bg-red-600/20 text-red-400 text-xs font-bold rounded">Frequently Cited</span>
+                        </div>
+                        <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden mb-2">
+                            <div class="bg-red-600 h-full w-[55%]"></div>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold text-zinc-500 mb-4 block">Contested</span>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Often named in books and documentaries; law enforcement views and evidence claims vary by
+                            source.
+                        </p>
+                    </div>
+
+                    <div class="case-card glass p-6 rounded-2xl hover:border-white/20 transition-colors">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-white">Multiple Theories</h4>
+                            <span class="px-2 py-1 bg-purple-900/20 text-purple-300 text-xs font-bold rounded">Open Set</span>
+                        </div>
+                        <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden mb-2">
+                            <div class="bg-purple-600 h-full w-[30%]"></div>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold text-zinc-500 mb-4 block">Low certainty</span>
+                        <p class="text-zinc-400 text-sm mb-4">
+                            Many names circulate; most are built on circumstantial links. The strongest section of the
+                            case remains documents: letters, ciphers, verified crime scenes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-white serif mb-8">Explore More Cases</h3>
+                    <div id="relatedCasesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+                </div>
+            </section>
+
+        </article>
+
+        <aside class="lg:col-span-4 space-y-8 relative">
+            <div class="sticky top-28 space-y-6">
+
+                <div class="glass p-6 rounded-2xl border-t-2 border-red-600">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i class="fas fa-list text-red-500"></i>
+                        <h3 class="text-white font-bold text-xs uppercase tracking-[0.3em]">Contents</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs font-bold uppercase tracking-widest text-zinc-500">
+                        <li>
+                            <a href="#overview"
+                                class="flex items-center justify-between hover:text-red-500 transition-colors py-2 border-b border-white/5">
+                                <span>01. Overview</span>
+                                <i class="fas fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#timeline"
+                                class="flex items-center justify-between hover:text-red-500 transition-colors py-2 border-b border-white/5">
+                                <span>02. Timeline</span>
+                                <i class="fas fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#letters"
+                                class="flex items-center justify-between hover:text-red-500 transition-colors py-2 border-b border-white/5">
+                                <span>03. Letters</span>
+                                <i class="fas fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ciphers"
+                                class="flex items-center justify-between hover:text-red-500 transition-colors py-2 border-b border-white/5">
+                                <span>04. Ciphers</span>
+                                <i class="fas fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#victims"
+                                class="flex items-center justify-between hover:text-red-500 transition-colors py-2 border-b border-white/5">
+                                <span>05. Victims</span>
+                                <i class="fas fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#suspects" class="flex items-center justify-between hover:text-red-500 transition-colors py-2">
+                                <span>06. Suspects</span>
+                                <i class="fas fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass p-5 rounded-2xl bg-red-900/5 border border-red-600/20">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-[10px] font-bold text-white uppercase">Live Database</span>
+                    </div>
+                    <p class="text-xs text-zinc-500 mb-4">Viewing File: <span class="text-red-400 mono">ZOD-1968</span>
+                    </p>
+                    <a href="https://discord.gg/fatalpast" target="_blank"
+                        class="block w-full bg-red-600 text-white py-3 rounded text-[11px] font-bold uppercase tracking-widest hover:bg-red-700 transition text-center">
+                        <i class="fab fa-discord mr-2"></i>Join Discussion
+                    </a>
+                </div>
+
+                <div class="glass p-5 rounded-2xl">
+                    <h3 class="text-white font-bold text-sm mb-4">Case Statistics</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs text-zinc-400 mb-1">
+                                <span>Investigation Status</span>
+                                <span class="text-red-500 font-bold">Unsolved</span>
+                            </div>
+                            <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-red-600 h-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-zinc-400 mb-1">
+                                <span>Public Interest</span>
+                                <span class="text-red-500 font-bold">Very High</span>
+                            </div>
+                            <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-red-600 h-full w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-zinc-400 mb-1">
+                                <span>Evidence Quality</span>
+                                <span class="text-red-500 font-bold">Mixed</span>
+                            </div>
+                            <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-red-600 h-full w-[55%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl border border-white/10">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-3">Sources & Reading</h4>
+                    <div class="space-y-3 text-sm text-zinc-400">
+                        <a class="block hover:text-white transition-colors" target="_blank" href="https://en.wikipedia.org/wiki/Zodiac_Killer">Wikipedia: Zodiac Killer</a>
+                        <a class="block hover:text-white transition-colors" target="_blank" href="https://www.zodiackiller.com/">ZodiacKiller.com</a>
+                        <a class="block hover:text-white transition-colors" target="_blank" href="https://www.zodiackillerfacts.com/">ZodiacKillerFacts.com</a>
+                        <a class="block hover:text-white transition-colors" target="_blank" href="https://www.zodiackillerciphers.com/">Zodiac Killer Ciphers</a>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+    </main>
+
+    <section class="border-t border-white/5 py-16 bg-black/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="group relative overflow-hidden rounded-xl p-8 feature-card">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-blue-600/20 transition-all duration-500">
+                    </div>
+                    <div
+                        class="absolute inset-0 border border-blue-600/30 group-hover:border-blue-600/80 rounded-xl transition-all duration-500">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="flex items-center mb-8">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-blue-600/40 to-blue-700/30 rounded-xl flex items-center justify-center border border-blue-600/40 group-hover:from-blue-600/60 group-hover:to-blue-700/50 transition-all">
+                                <i class="fab fa-discord text-blue-400 text-3xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3
+                                    class="text-3xl font-bold text-white font-serif group-hover:text-blue-400 transition-colors">
+                                    Join Discord</h3>
+                                <p class="text-blue-400 font-semibold text-sm">5,000+ Active Members</p>
+                            </div>
+                        </div>
+
+                        <p class="text-zinc-300 mb-8 text-lg leading-relaxed group-hover:text-white transition-colors">
+                            Compare timelines, debate cipher logic, and share documentary-grade resources.
+                        </p>
+
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center space-x-3 text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-600/20 flex items-center justify-center border border-green-600/40">
+                                    <i class="fas fa-check text-green-500 text-xs"></i>
+                                </div>
+                                <span>Case theory threads</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-600/20 flex items-center justify-center border border-green-600/40">
+                                    <i class="fas fa-check text-green-500 text-xs"></i>
+                                </div>
+                                <span>Archive links & reading lists</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-600/20 flex items-center justify-center border border-green-600/40">
+                                    <i class="fas fa-check text-green-500 text-xs"></i>
+                                </div>
+                                <span>Weekly spotlight cases</span>
+                            </div>
+                        </div>
+
+                        <a href="https://discord.gg/fatalpast" target="_blank"
+                            class="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-blue-800 group/btn transition-all font-bold uppercase tracking-widest text-center">
+                            <i class="fab fa-discord mr-2 group-hover/btn:scale-110 transition-transform"></i>Join
+                            Server
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4 flex flex-col">
+                    <a href="https://youtube.com/fatalpast" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-8 feature-card flex-1"
+                        style="animation-delay: 0.2s;">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-red-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-red-600/30 group-hover:border-red-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-start mb-4">
+                                <div
+                                    class="w-14 h-14 bg-gradient-to-br from-red-600/40 to-red-700/30 rounded-lg flex items-center justify-center border border-red-600/40 group-hover:from-red-600/60 group-hover:to-red-700/50 transition-all flex-shrink-0">
+                                    <i class="fab fa-youtube text-red-500 text-2xl"></i>
+                                </div>
+                                <div class="ml-4 flex-grow">
+                                    <h3
+                                        class="text-2xl font-bold text-white font-serif group-hover:text-red-400 transition-colors">
+                                        YouTube</h3>
+                                    <p class="text-red-400 font-semibold text-sm">Documentaries & Case Analysis</p>
+                                </div>
+                            </div>
+                            <p
+                                class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
+                                Watch our in-depth documentaries, case analyses, and exclusive video content.
+                            </p>
+                            <div
+                                class="flex items-center text-red-500 font-semibold text-sm group-hover:text-red-400 transition-colors">
+                                <span>Subscribe Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/fatalpast" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-8 feature-card flex-1"
+                        style="animation-delay: 0.3s;">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-purple-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-purple-600/30 group-hover:border-purple-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-start mb-4">
+                                <div
+                                    class="w-14 h-14 bg-gradient-to-br from-purple-600/40 to-pink-600/30 rounded-lg flex items-center justify-center border border-purple-600/40 group-hover:from-purple-600/60 group-hover:to-pink-600/50 transition-all flex-shrink-0">
+                                    <i class="fab fa-instagram text-purple-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4 flex-grow">
+                                    <h3
+                                        class="text-2xl font-bold text-white font-serif group-hover:text-purple-400 transition-colors">
+                                        Instagram</h3>
+                                    <p class="text-purple-400 font-semibold text-sm">Daily Stories & Reels</p>
+                                </div>
+                            </div>
+                            <p
+                                class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
+                                Follow daily stories, behind-the-scenes content, and engaging case reels.
+                            </p>
+                            <div
+                                class="flex items-center text-purple-500 font-semibold text-sm group-hover:text-purple-400 transition-colors">
+                                <span>Follow Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://tiktok.com/@fatalpast" target="_blank"
+                        class="group relative overflow-hidden rounded-xl p-8 feature-card flex-1"
+                        style="animation-delay: 0.4s;">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-600/10 via-dark-bg/50 to-dark-bg z-0 group-hover:from-cyan-600/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-cyan-600/30 group-hover:border-cyan-600/80 rounded-xl transition-all duration-500">
+                        </div>
+
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-start mb-4">
+                                <div
+                                    class="w-14 h-14 bg-gradient-to-br from-cyan-600/40 to-cyan-700/30 rounded-lg flex items-center justify-center border border-cyan-600/40 group-hover:from-cyan-600/60 group-hover:to-cyan-700/50 transition-all flex-shrink-0">
+                                    <i class="fab fa-tiktok text-cyan-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4 flex-grow">
+                                    <h3
+                                        class="text-2xl font-bold text-white font-serif group-hover:text-cyan-400 transition-colors">
+                                        TikTok</h3>
+                                    <p class="text-cyan-400 font-semibold text-sm">Quick Cases & Crime Fix</p>
+                                </div>
+                            </div>
+                            <p
+                                class="text-zinc-300 text-sm leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors">
+                                Explore short-form case summaries and historical crime facts.
+                            </p>
+                            <div
+                                class="flex items-center text-cyan-500 font-semibold text-sm group-hover:text-cyan-400 transition-colors">
+                                <span>Follow Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 py-12 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <footer
+                            class="relative border-t border-white/10 py-16 md:py-24 bg-black/95 backdrop-blur-sm overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-b from-red-900/3 to-transparent pointer-events-none">
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 md:pt-12">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p class="text-zinc-600 text-sm text-center md:text-left">© 2024 FatalPast. All rights reserved.
+                        Content for historical and educational purposes.</p>
+                    <div class="flex items-center space-x-6">
+                        <a href="https://discord.gg/fatalpast" target="_blank"
+                            class="text-zinc-500 hover:text-blue-500 hover:scale-125 transition-all duration-300">
+                            <i class="fab fa-discord text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/fatalpast" target="_blank"
+                            class="text-zinc-500 hover:text-red-500 hover:scale-125 transition-all duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/fatalpast" target="_blank"
+                            class="text-zinc-500 hover:text-purple-500 hover:scale-125 transition-all duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://tiktok.com/@fatalpast" target="_blank"
+                            class="text-zinc-500 hover:text-cyan-400 hover:scale-125 transition-all duration-300">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition-colors z-40 hidden"
+        aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="loadingOverlay"
+        class="fixed inset-0 bg-black/98 flex items-center justify-center z-[100] opacity-0 invisible backdrop-blur-md transition-all duration-500">
+        <div class="scan-line"></div>
+        <div class="spinner-container">
+            <div class="spinner">
+                <i class="fas fa-skull spinner-icon"></i>
+            </div>
+            <div class="loading-text">
+                <div class="loading-status">Loading Evidence...</div>
+                <div class="loading-progress">
+                    <div class="loading-progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../app.js"></script>
+    <script>
+        async function loadRelatedCases() {
+            try {
+                const response = await fetch('../cases.json');
+                const allCases = await response.json();
+                const currentCaseName = "Zodiac Killer";
+
+                const currentCase = allCases.find(c => c.name === currentCaseName);
+                if (!currentCase) return;
+
+                let finalCases = allCases.filter(c =>
+                    c.name !== currentCaseName &&
+                    (c.type === currentCase.type || c.era === currentCase.era)
+                );
+
+                if (finalCases.length < 3) {
+                    const others = allCases.filter(c => c.name !== currentCaseName && !finalCases.includes(c));
+                    finalCases.push(...others);
+                }
+
+                finalCases = finalCases.sort(() => Math.random() - 0.5).slice(0, 3);
+
+                const grid = document.getElementById('relatedCasesGrid');
+                if (!grid) return;
+
+                grid.innerHTML = finalCases.map(c => `
+                    <a href="${c.link.startsWith('cases/') ? '../' + c.link : c.link}" class="case-card glass p-6 rounded-xl border border-white/10 hover:border-red-500/30 transition-colors group">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2 py-1 bg-red-900/30 text-red-400 text-xs font-bold rounded">${c.year}</span>
+                            <i class="fas fa-arrow-right text-gray-400 group-hover:text-red-500 transition-colors"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">${c.name}</h4>
+                        <p class="text-zinc-400 text-sm">${c.description}</p>
+                    </a>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading related cases:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadRelatedCases();
+            console.log('FatalPast Archive - Dark History Database');
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+
+</html>

@@ -582,55 +582,96 @@ html {
     }
 }
 
-/* Exclusive Content Warning */
+
+/* CASE CARD & EVIDENCE ENHANCEMENTS */
 .exclusive-content-warning {
+    display: none !important;
+    /* Hide old system */
+}
+
+.case-image-wrapper,
+.wiki-img-container.evidence {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.exclusive-blur {
+    filter: blur(40px) brightness(0.7) grayscale(100%);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.revealed .exclusive-blur {
+    filter: blur(0) brightness(1) grayscale(0) !important;
+}
+
+.exclusive-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(153, 27, 27, 0.3) 100%);
+    inset: 0;
+    background: rgba(10, 10, 10, 0.95);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    backdrop-filter: blur(2px);
-    z-index: 10;
-}
-
-figure.evidence:hover .exclusive-content-warning,
-.wiki-img-container.evidence:hover .exclusive-content-warning {
-    opacity: 1;
-}
-
-.exclusive-content-warning-content {
+    z-index: 50;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.85);
-    border: 2px solid rgba(220, 38, 38, 0.6);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.exclusive-content-warning-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #dc2626;
-    margin-bottom: 0.5rem;
+.revealed .exclusive-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+}
+
+.exclusive-badge {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.6em;
+    margin-bottom: 2rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    opacity: 0.6;
 }
 
-.exclusive-content-warning-text {
-    font-size: 0.875rem;
-    color: #f3f4f6;
-    line-height: 1.5;
+.reveal-btn {
+    background: transparent;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.reveal-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.reveal-btn:hover {
+    color: black;
+    border-color: white;
+}
+
+.reveal-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Accessibility */
@@ -639,4 +680,92 @@ a:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px #000, 0 0 0 4px #dc2626;
     border-radius: 0.25rem;
+}
+
+/* CASE CARD ENHANCEMENTS */
+.case-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.case-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    /* h-48 equivalent */
+    overflow: hidden;
+}
+
+/* For featured cases in app.js which have different heights */
+.case-card.md\:h-80 .case-image-wrapper {
+    height: 100% !important;
+}
+
+.exclusive-blur {
+    filter: blur(30px) grayscale(100%);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform: scale(1.1);
+}
+
+.revealed .exclusive-blur {
+    filter: blur(0) grayscale(0) !important;
+    transform: scale(1);
+}
+
+.exclusive-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.revealed .exclusive-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.1);
+}
+
+.exclusive-badge {
+    color: #a1a1aa;
+    /* text-zinc-400 */
+    font-family: 'Fira Code', monospace;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.4rem;
+}
+
+.reveal-btn {
+    background: white;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.reveal-btn:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.reveal-btn:active {
+    transform: translateY(0);
 }
