@@ -18,9 +18,13 @@ function renderCases() {
     if (!grid) return;
 
     const filtered = casesData.filter(c => {
-        const matchesSearch = c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            c.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            c.year.includes(searchTerm);
+        const q = searchTerm.trim().toLowerCase();
+        const matchesSearch =
+            q === "" ||
+            (c.name || "").toLowerCase().includes(q) ||
+            (c.location || "").toLowerCase().includes(q) ||
+            (c.description || "").toLowerCase().includes(q) ||
+            String(c.year || "").toLowerCase().includes(q);
         const matchesEra = activeFilters.era === "all" || c.era === activeFilters.era;
         const matchesType = activeFilters.type === "all" || c.type === activeFilters.type;
         const matchesRegion = activeFilters.region === "all" || c.region === activeFilters.region;
